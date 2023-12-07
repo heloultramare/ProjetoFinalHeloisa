@@ -1,0 +1,25 @@
+﻿@model ProjetoFinalHeloisa.Models.Usuario
+@{
+    Layout = null;
+}
+<link href="~/css/login.css" rel="stylesheet" />
+<div class="caixalogin">
+    <img class="navbar-brand logo-img" src="~/img/logo.jpg" />
+    <h2>Acesse sua conta</h2>
+    <form asp-action="Login">
+        <div class="email">
+            <label asp-for="UsuarioEmail"></label>
+            <input asp-for="UsuarioEmail" />
+            <span asp-validation-for="UsuarioEmail"></span>
+        </div>
+        <div class="senha">
+            <label asp-for="UsuarioSenha"></label>
+            <input asp-for="UsuarioSenha" type="password"/>
+            <span asp-validation-for="UsuarioSenha"></span>
+        </div>
+        <h4>@ViewBag.Mensagem</h4>
+        <div >
+            <input class="botao" type="submit" value="Entrar" />
+        </div>
+    </form>
+</div>

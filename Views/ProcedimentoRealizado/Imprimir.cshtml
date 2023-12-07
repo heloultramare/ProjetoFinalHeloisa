@@ -1,0 +1,46 @@
+﻿@model ProjetoFinalHeloisa.Models.ProcedimentoRealizado
+@{
+    Layout = null;
+}
+<link rel="stylesheet" href="~/css/imprimir.css"/>
+<body>
+    <div>
+        <div class="titulo">
+            <div class="logoimagem">
+                <div class="caixaimagem">
+                    <img class="imagem" src="~/img/logoBioScan.jpg" alt="">
+                </div>
+                <div>
+                    <h1>BioScan</h1>
+                </div>
+            </div>
+            <h3 class="subtitulo">Clínica de Análises Laboratoriais</h3>
+        </div>
+        <div class="informacoes">
+            <div>
+                <span>Cliente: @Html.DisplayFor(model => model.Cliente.ClienteNome)</span>
+            </div>
+            <div>
+                <span>Colaborador: @Html.DisplayFor(model => model.Colaborador.ColaboradorNome)</span>
+            </div>
+            <div>
+                <span>Local da Realização: BioScan</span>
+            </div>
+        </div>
+        <div class="caixameio">
+            <div class="caixa1">
+                <div>
+                    <span>Procedimento: @Html.DisplayFor(model => model.Procedimento.ProcedimentoNome)</span>
+                </div>
+                <div>
+                    <span class="subtitulo">@Html.DisplayFor(model => model.ObservacaoRealizacao)</span>
+                </div>
+            </div>
+            <div class="caixa2">
+                <div>
+                    <span>Data da coleta: @Html.DisplayFor(model => model.DataRealizacao)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
